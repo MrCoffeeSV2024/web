@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Mr. Coffee</title>
+	<link class="f" rel="shortcut icon" href="img/Logo de la cafeteria.png" />
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="carrito.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+	<header>
+		<div class="container-hero">
+			<div class="container hero">
+				<div class="customer-support">
+					<i class="fa-solid fa-headset"></i>
+					<div class="content-customer-support">
+						<span class="text">Soporte al cliente</span>
+						<span class="number">+503 7875 5594</span>
+					</div>
+				</div>
+
+				<div class="container-logo">
+					<i class="fa-solid fa-mug-hot"></i>
+					<h1 class="logo"><a href="/">mr. coffee</a></h1>
+				</div>
+
+
+			</div>
+			<div class="container-navbar">
+				<nav class="navbar container">
+					<i class="fa-solid fa-bars"></i>
+					<ul class="menu">
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#Especialidades De La Casa">Especialidades De La casa</a></li>
+						<li><a href="#Especialidades">Especialidades</a></li>
+						<li><a href="#Acompañamientos">Acompañamientos</a></li>
+						<li><a href="#Desayunos">Desayunos</a></li>
+						<li><a href="#Bebidas">Bebidas Frias</a></li>
+						<li><a href="#Nosotros">Nosotros</a></li>
+						<li><a href="index EN.html">Traducir al ingles</a></li>
+					</ul>
+
+					<div id="cart-container">
+						<img src="img/carrito-de-compras.ico" alt="Mostrar Carrito" id="toggle-cart"
+							onclick="toggleCart()">
+						<div id="cart">
+
+							<h2 class="carrito-h2">Carrito de Compras</h2>
+
+							<div id="cart-items" class="cart-items"></div>
+							<div class="total">Total: <span class="Cart-total" id="cart-total"> $0.00</span></div>
+							<a href="formpago.html#" class="button">Comprar</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+	</header>
+
+	<section class="banner">
+		<div class="content-banner">
+			<p>Café Delicioso</p>
+			<h2>100% Natural <br />Café Fresco</h2>
+		</div>
+	</section>
+
+	<main class="main-content">
+		<section class="container container-features">
+			<div class="card-feature">
+				<i class="fa-solid fa-plane-up"></i>
+				<div class="feature-content">
+					<span>promociones de envio </span>
+					<p>En pedido superior a $10</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="fa-solid fa-wallet"></i>
+				<div class="feature-content">
+					<span>Contrareembolso</span>
+					<p>100% garantía de devolución de dinero</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="fa-solid fa-gift"></i>
+				<div class="feature-content">
+					<span>Tarjeta regalo especial</span>
+					<p>Ofrece bonos especiales con regalo</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="fa-solid fa-headset"></i>
+				<div class="feature-content">
+					<span>Servicio al cliente 24/7</span>
+					<p>LLámenos 24/7 al +503 7875 5594</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="container top-categories">
+			<h1 class="heading-1">Mejores Categorías</h1>
+			<div class="container-categories">
+				<div class="card-category category-moca">
+					<p>Café moca</p>
+
+				</div>
+				<div class="card-category category-expreso">
+					<p>Expreso Americano</p>
+
+				</div>
+				<div class="card-category category-capuchino">
+					<p>Capuchino</p>
+
+				</div>
+			</div>
+		</section>
+
+		<section class="container top-products" id="catalogo">
+			<h1 class="heading-1" id="Especialidades De La Casa">Especialidades De La Casa</h1>
+
+			<div class="container-options">
+				<span class="active">Destacados</span>
+				<span class="active">Más recientes</span>
+				<span class="active">Mejores Vendidos</span>
+			</div>
+
+			<div class="container-products">
+				<!-- Producto 1 -->
+				<div class="card-product" data-id="1">
+					<div class="container-img">
+						<img src="img/DonJusto-Product-ES-Bourbon1.png" alt="Cafe Irish" />
+						<span class="discount">-13%</span>
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Cafe De Don Justo</h3>
+						<div id="custom-alert">Se añadió al carrito correctamente</div>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$6.60 <span>$8.00</span></p>
+					</div>
+				</div>
+				<!-- Producto 2 -->
+				<div class="card-product" data-id="2">
+					<div class="container-img">
+						<img src="img/cafe ataco.webp" alt="Cafe Ataco" />
+						<span class="discount">-22%</span>
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Cafe Ataco</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$9.10 <span>$14.00</span></p>
+					</div>
+				</div>
+				<!-- Producto 3 -->
+				<div class="card-product" data-id="3">
+					<div class="container-img">
+						<img src="img/pacamara.jpeg" alt="Cafe Pacamara" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Cafe Pacamara</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$13.35</p>
+					</div>
+				</div>
+				<!-- Producto 4 -->
+				<div class="card-product" data-id="4">
+					<div class="container-img">
+						<img src="img/cafe4.webp" alt="Cafe Volcano Single Origin" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Cafe Volcano Single Origin</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$21.75</p>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="gallery">
+			<img src="img/gallery1.jpg" alt="Gallery Img1" class="gallery-img-1" /><img src="img/gallery2.jpg"
+				alt="Gallery Img2" class="gallery-img-2" /><img src="img/gallery3.jpg" alt="Gallery Img3"
+				class="gallery-img-3" /><img src="img/gallery4.jpg" alt="Gallery Img4" class="gallery-img-4" /><img
+				src="img/gallery5.jpg" alt="Gallery Img5" class="gallery-img-5" />
+		</section>
+
+		<section class="container specials">
+			<h1 class="heading-1" id="Especialidades">Especialidades</h1>
+
+			<div class="container-products">
+				<!-- Producto 8 -->
+				<div class="card-product" data-id="8">
+					<div class="container-img">
+						<img src="img/cafe-irish.jpg" alt="Cafe Irish" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Cafe Irish</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$4.60</p>
+					</div>
+				</div>
+				<!-- Producto 9-->
+				<div class="card-product" data-id="9">
+					<div class="container-img">
+						<img src="img/cafe-ingles.jpg" alt="Cafe Ataco" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Cafe Ingles</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$5.70</p>
+					</div>
+				</div>
+				<!-- Producto 10 -->
+				<div class="card-product" data-id="10">
+					<div class="container-img">
+						<img src="img/cafe-viena.jpg" alt="Cafe Pacamara" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Cafe Viena</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$3.85</p>
+					</div>
+				</div>
+				<!-- Producto 11-->
+				<div class="card-product" data-id="11">
+					<div class="container-img">
+						<img src="img/cafe-liqueurs.jpg" alt="Cafe Volcano Single Origin" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Cafe Liqueurs</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$5.60</p>
+					</div>
+				</div>
+			</div>
+			<div class="container-products">
+
+				<!-- Producto 12 -->
+				<div class="card-product" data-id="12">
+					<div class="container-img">
+						<img src="img/mokca.png" alt="Cafe Irish" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Cafe Moca</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$3.25</p>
+					</div>
+				</div>
+				<!-- Producto 13-->
+				<div class="card-product" data-id="13">
+					<div class="container-img">
+						<img src="img/cafe-helado.jpg" alt="Cafe Ataco" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Cafe Helado</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$5.60</p>
+					</div>
+				</div>
+				<!-- Producto 14 -->
+				<div class="card-product" data-id="14">
+					<div class="container-img">
+						<img src="img/capuchino.webp" alt="Cafe Pacamara" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Capuchino</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$2.50</p>
+					</div>
+				</div>
+				<!-- Producto 15-->
+				<div class="card-product" data-id="15">
+					<div class="container-img">
+						<img src="img/cafe.webp" alt="Cafe Volcano Single Origin" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Cafe Americano</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$1.85</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container specials">
+			<h1 class="heading-1" id="Acompañamientos">Acompañamientos</h1>
+
+			<div class="container-products">
+				<!-- Producto 16 -->
+				<div class="card-product" data-id="16">
+					<div class="container-img">
+						<img src="img/cachita.webp" alt="Cafe Irish" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Cachitos</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$0.80</p>
+					</div>
+				</div>
+				<!-- Producto 17-->
+				<div class="card-product" data-id="17">
+					<div class="container-img">
+						<img src="img/Pastelitos.png" alt="Cafe Ataco" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Pastelitos</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$0.35</p>
+					</div>
+				</div>
+				<!-- Producto 18 -->
+				<div class="card-product" data-id="18">
+					<div class="container-img">
+						<img src="img/quesadilla.png" alt="Cafe Pacamara" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Quesadilla</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$1.25</p>
+					</div>
+				</div>
+				<!-- Producto 19-->
+				<div class="card-product" data-id="19">
+					<div class="container-img">
+						<img src="img/semita.png" alt="Cafe Volcano Single Origin" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Semita</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$0.40</p>
+					</div>
+				</div>
+			</div>
+			<div class="container-products">
+
+				<!-- Producto 20 -->
+				<div class="card-product" data-id="20">
+					<div class="container-img">
+						<img src="img/Dulce-Pecado.jpg" alt="Cafe Irish" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Porcion de P. de Chocolate</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$1.25</p>
+					</div>
+				</div>
+				<!-- Producto 21-->
+				<div class="card-product" data-id="21">
+					<div class="container-img">
+						<img src="img/pastel de oreo1.jpg" alt="Cafe Ataco" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Porcion de P. de Oreo</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$1.50</p>
+					</div>
+				</div>
+				<!-- Producto 22 -->
+				<div class="card-product" data-id="22">
+					<div class="container-img">
+						<img src="img/pastel de frutas.jpeg" alt="Cafe Pacamara" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Porcion de P. de Frutas</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$1.35</p>
+					</div>
+				</div>
+				<!-- Producto 23-->
+				<div class="card-product" data-id="23">
+					<div class="container-img">
+						<img src="img/donas.webp" alt="Cafe Volcano Single Origin" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Donas Rellenas</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$1.25</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container specials">
+			<h1 class="heading-1" id="Desayunos">Desayunos</h1>
+
+			<div class="container-products">
+				<!-- Producto 21 -->
+				<div class="card-product" data-id="21">
+					<div class="container-img">
+						<img src="img/product_detail_croissant_jamonqueso.png" alt="Cafe Irish" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Croissan'wich</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$3.50</p>
+					</div>
+				</div>
+				<!-- Producto 22-->
+				<div class="card-product" data-id="22">
+					<div class="container-img">
+						<img src="img/tamaless.jpg" alt="Cafe Ataco" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Tamales</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$1.00</p>
+					</div>
+				</div>
+				<!-- Producto 23 -->
+				<div class="card-product" data-id="23">
+					<div class="container-img">
+						<img src="img/combo111.jpg" alt="Cafe Pacamara" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Tamales + Cafe</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$1.00</p>
+					</div>
+				</div>
+				<!-- Producto 24-->
+				<div class="card-product" data-id="24">
+					<div class="container-img">
+						<img src="img/combo2.jpg" alt="Cafe Volcano Single Origin" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Croissan'wich + Coca Cola</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$4.50</p>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="container specials">
+			<h1 class="heading-1" id="Bebidas">Bebidas Frias</h1>
+
+			<div class="container-products">
+				<!-- Producto 25 -->
+				<div class="card-product" data-id="25">
+					<div class="container-img">
+						<img src="img/agua.webp" alt="Cafe Irish" />
+						<span class="discount">-13%</span>
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Botella De Agua</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$0.75</p>
+					</div>
+				</div>
+				<!-- Producto 26-->
+				<div class="card-product" data-id="26">
+					<div class="container-img">
+						<img src="img/coca.webp" alt="Cafe Ataco" />
+						<span class="discount">-22%</span>
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Coca Cola</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$0.90</p>
+					</div>
+				</div>
+				<!-- Producto 27 -->
+				<div class="card-product" data-id="27">
+					<div class="container-img">
+						<img src="img/jugo.webp" alt="Cafe Pacamara" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Jugo Del Valle</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$0.70</p>
+					</div>
+				</div>
+				<!-- Producto 28 -->
+				<div class="card-product" data-id="28">
+					<div class="container-img">
+						<img src="img/limonadaa.avif" alt="Cafe Volcano Single Origin" />
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Vaso de limonada</h3>
+						<button class="btn-add-cart" onclick="addToCart()">Comprar</button>
+						<p class="price">$1.25</p>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<section class="container blogs">
+			<h1 class="heading-1">Últimos Blogs</h1>
+
+			<div class="container-blogs">
+				<div class="card-blog">
+					<div class="container-img">
+						<img src="img/blog-1.jpg" alt="Imagen Blog 1" />
+						<div class="button-group-blog">
+							<span>
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-link"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-blog">
+						<h3>Las Mejores Cafeterías en San Salvador</h3>
+						<span> 15 de Julio 2024 </span>
+						<p>
+							San Salvador ofrece una gran variedad de cafeterías donde se celebra el café local de alta
+							calidad. Desde espacios modernos hasta rincones acogedores.
+						</p>
+
+					</div>
+				</div>
+				<div class="card-blog">
+					<div class="container-img">
+						<img src="img/blog-2.jpg" alt="Imagen Blog 2" />
+						<div class="button-group-blog">
+							<span>
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-link"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-blog">
+						<h3>Entrevista con un Barista Salvadoreño</h3>
+						<span>22 de Mayo 2024</span>
+						<p>
+							Conversamos con Carlos Hernández, un barista reconocido en El Salvador, sobre lo que hace
+							que una taza de café sea excepcional. Desde la selección de granos hasta la técnica de
+							vertido.
+						</p>
+
+					</div>
+				</div>
+				<div class="card-blog">
+					<div class="container-img">
+						<img src="img/blog-3.jpg" alt="Imagen Blog 3" />
+						<div class="button-group-blog">
+							<span>
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-link"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-blog">
+						<h3> Historia del Café en El Salvador</h3>
+						<span>5 de Junio 2024</span>
+						<p>
+							El Salvador tiene una rica historia cafetalera que ha sido fundamental para su economía y
+							cultura. Descubre cómo el café llegó a ser el principal producto de exportación del país y
+							cómo ha evolucionado la industria a lo largo de los siglos.
+						</p>
+
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<div class="separacion">
+
+	</div>
+	<footer class="footer" id="Nosotros">
+		<div class="container container-footer">
+			<div class="menu-footer">
+				<div class="contact-info">
+					<p class="title-footer">Información de Contacto</p>
+					<ul>
+						<li>
+							Dirección: Avenida Quirino Chavez, sur 13, Apopa
+						</li>
+						<li>Teléfono: 7498 8516</li>
+						<li>Fax: 55555300</li>
+						<li>EmaiL: mrcoffeesv2024@gmail.com</li>
+					</ul>
+					<div class="social-icons">
+						<span class="facebook">
+							<i class="fa-brands fa-facebook-f"></i>
+						</span>
+						<span class="instagram">
+							<i class="fa-brands fa-instagram"></i>
+						</span>
+					</div>
+				</div>
+
+				<div class="information">
+					<p class="title-footer">Integrantes</p>
+					<ul>
+						<li>Eduardo Martinez</li>
+						<li>Daniela Moran</li>
+						<li>Charlie Ramirez</li>
+					</ul>
+				</div>
+
+				<div class="my-account">
+					<p class="title-footer">Codigos</p>
+
+					<ul>
+						<li>1D27</li>
+						<li>1D31</li>
+						<li>1D34</li>
+					</ul>
+				</div>
+
+				<div class="newsletter">
+					<p class="title-footer">Boletín </p>
+
+					<div class="content">
+						<p>
+							Obten nuestro boletin para tener mas informacion de Mr. Coffee
+						</p>
+						<a href="img/Mr. Coffee.pdf" download="Mr. Coffee.pdf"><button>Descargar</button></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="copyright">
+				<p>
+					Desarrollado por 1°D &copy; 2024
+				</p>
+
+				<img src="img/payment.png" alt="Pagos">
+			</div>
+		</div>
+	</footer>
+	<script src="carrito.js"></script>
+
+	<script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="script.js">
+
+
+
+</body>
+
+</html>
