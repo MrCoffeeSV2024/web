@@ -427,3 +427,65 @@ input[type="radio"]:hover + label {
   margin-top: 20px;
 }
 
+/* Estilos para pantallas más grandes (escritorio) */
+body {
+  font-size: 16px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  body {
+      font-size: 14px;
+  }
+
+  .container {
+      width: 100%;
+      padding: 10px;
+  }
+}
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .modal__container {
+      width: 90%;
+      padding: 15px;
+  }
+
+  .modal__product {
+      width: 120px;
+  }
+
+  .modal__circle {
+      width: 80px;
+      height: 80px;
+  }
+
+  input[type="text"], input[type="date"] {
+      padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal__product {
+      width: 100px;
+  }
+
+  .modal__circle {
+      width: 60px;
+      height: 60px;
+  }
+
+  .payment-methods {
+      flex-direction: column;
+  }
+
+  .form-list__row label {
+      font-size: 10px;
+  }
+}
