@@ -17,82 +17,8 @@ html {
 	box-sizing: border-box;
 }
 
-.container {
-	max-width: 120rem;
-	margin: 0 auto;
-}
 
-.heading-1 {
-	text-align: center;
-	font-weight: 500;
-	font-size: 3rem;
-}
-
-
-.container-hero {
-	background-color: var(--background-color);
-}
-
-.hero {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 2rem 0;
-}
-
-.customer-support {
-	display: flex;
-	align-items: center;
-	gap: 2rem;
-}
-
-.customer-support i {
-	font-size: 3.3rem;
-}
-
-.content-customer-support {
-	display: flex;
-	flex-direction: column;
-}
-
-.container-logo {
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-}
-
-.container-logo i {
-	font-size: 3rem;
-}
-
-.container-logo h1 a {
-	text-decoration: none;
-	text-align: center;
-	color: #000;
-	font-size: 3rem;
-	text-transform: uppercase;
-	letter-spacing: -1px;
-	
-}
-
-.container-user {
-	display: flex;
-	gap: 1rem;
-	cursor: pointer;
-}
-
-.container-user .fa-user {
-	font-size: 3rem;
-	color: var(--primary-color);
-	padding-right: 2.5rem;
-	border-right: 1px solid #e2e2e2;
-}
-
-.container-user .fa-basket-shopping {
-	font-size: 3rem;
-	color: var(--primary-color);
-	padding-left: 1rem;
-}
+ 
 
 #cart-container {
     display: flex;
@@ -753,653 +679,282 @@ box-shadow: none;
 }
 
 
-.blogs {
+
+
+  
+  footer {
+	background-color: #b08d6a; /* Fondo oscuro */
+	color: var(--background-color); /* Texto claro */
+	padding: 40px 0;
+	font-family: 'Arial', sans-serif;
+  }
+  
+  .footer-container {
 	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-}
-
-.container-blogs {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 3rem;
-}
-
-.card-blog {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-}
-
-.card-blog .container-img {
-	border-radius: 2rem;
-	cursor: pointer;
-	position: relative;
-	overflow: hidden;
-}
-
-.button-group-blog {
-	position: absolute;
-	bottom: 1.5rem;
-	right: -2.5rem;
-
-	display: flex;
-	gap: 0.7rem;
-	z-index: -1;
-	transition: all 0.3s ease;
-}
-
-.card-blog:hover .button-group-blog {
-	z-index: 0;
-	right: 1.5rem;
-}
-
-.button-group-blog span {
-	background-color: #fff;
-	padding: 1rem;
-	border-radius: 50%;
-	transition: all 0.4s ease;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.button-group-blog span i {
-	font-size: 1.3rem;
-}
-
-.button-group-blog span:hover {
-	background-color: var(--primary-color);
-}
-
-.button-group-blog span:hover i {
-	color: #fff;
-}
-
-.content-blog h3 {
-	font-size: 1.8rem;
-	margin-bottom: 1.7rem;
-	color: var(--dark-color);
-	font-weight: 500;
-}
-
-.content-blog h3:hover {
-	color: var(--primary-color);
-	cursor: pointer;
-}
-
-.content-blog p {
-	margin-top: 1rem;
-	font-size: 1.4rem;
-	color: #777;
-}
-
-.content-blog span {
-	color: var(--primary-color);
-	font-size: 1.3rem;
-}
-
-.btn-read-more {
-	padding: 1rem 3rem;
-	background-color: var(--primary-color);
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 1.4rem;
-	border-radius: 2rem;
-	margin: 3rem 0 5rem;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+  }
+  
+  .footer-about {
+	flex: 1 1 300px;
+	margin-bottom: 20px;
+  }
+  
+  .footer-about h3 {
+	font-size: 18px;
+	margin-bottom: 15px;
+	color: var(--background-color); /* Texto claro */
+  }
+  
+  .footer-about p {
+	font-size: 16px;
+	line-height: 1.6;
+	color: var(--background-color); /* Texto claro */
+  }
+  
+  .footer-about .btn-download {
 	display: inline-block;
-	cursor: pointer;
-}
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: white;
+	color: black; /* Texto oscuro */
+	text-decoration: none;
+	font-size: 14px;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+  }
+  
+  .footer-about .btn-download:hover {
+	background-color: #b08d6a;
+  }
+  
+  .footer-links, .footer-hours {
+	flex: 1 1 200px;
+	margin-bottom: 20px;
+  }
+  
+  .footer-links h3, .footer-hours h3 {
+	font-size: 18px;
+	margin-bottom: 15px;
+	color: var(--background-color); /* Texto claro */
+  }
+  
+  .footer-links ul, .footer-hours ul {
+	list-style: none;
+	padding: 0;
+  }
+  
+  .footer-links ul li, .footer-hours ul li {
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: var(--background-color); /* Texto claro */
+  }
+  
+  .footer-bottom {
+	text-align: center;
+	padding-top: 20px;
+	border-top: 1px solid white;
+  }
+  
+  .footer-bottom p {
+	font-size: 14px;
+	color: var(--background-color); /* Texto claro */
+	margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+	.footer-container {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	.footer-about, .footer-links, .footer-hours {
+	  text-align: center;
+	  flex: 1 1 100%;
+	}
+  }
+  
 
-.btn-read-more:hover {
-	background-color: var(--dark-color);
-}
 
-/* Footer General */
-.footer {
-    background-color: #a97a50;
-    color: #fff;
-    padding: 20px 15px; /* Reducido para mejor visualización en móviles */
-    font-family: 'Roboto', sans-serif;
-}
 
-.container-footer {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se apilen si no hay espacio */
-    justify-content: space-between;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Secciones del Footer */
-.footer-section {
-    flex: 1 1 300px; /* Ajusta el tamaño mínimo en móviles */
-    margin: 10px 10px;
-}
-
-.footer-section h4 {
-    font-size: 1.2em; /* Tamaño más pequeño para móviles */
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.footer-section p {
-    font-size: 0.9em;
-    margin-bottom: 8px;
-}
-
-.footer-section .download-btn {
-    width: 100%; /* El botón será del 100% del ancho en pantallas pequeñas */
-    text-align: center;
-}
-
-/* Social Icons */
-.social-icons {
-    margin-top: 10px;
-}
-
-.social-icons a {
-    color: #fff;
-    font-size: 1.3em;
-    margin-right: 8px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: #ccc;
-}
-
-/* Footer Bottom */
-.footer-bottom {
+/* Estilos de la barra de navegación */
+header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
-    font-size: 0.8em;
-    color: #ddd;
-    position: relative;
+    background-color: #222; /* Color oscuro para la barra */
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
 }
 
-.footer-bottom p {
-    margin: 0;
-}
-
-/* Métodos de Pago */
-.payment-methods {
-    position: absolute;
-    bottom: 10px;
-    right: 20px;
-}
-
-.payment-methods img {
-    max-width: 120px; /* Tamaño ajustado en móviles */
-    height: auto;
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-    .container-footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-section {
-        margin: 10px 0;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        gap: 5px;
-        align-items: center;
-        position: relative;
-    }
-
-    .payment-methods {
-        position: static;
-        margin-top: 10px;
-    }
-
-    .payment-methods img {
-        max-width: 100px;
-    }
-
-    .footer-section h4 {
-        font-size: 1.1em; /* Ajustamos el tamaño del título */
-    }
-
-    .footer-section p {
-        font-size: 0.85em;
-    }
-
-    .download-btn {
-        width: 80%; /* Ancho del botón en móviles */
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .container-footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-section h4 {
-        font-size: 1em; /* Tamaño más pequeño para dispositivos móviles */
-    }
-
-    .footer-section p {
-        font-size: 0.8em;
-    }
-
-    .footer-section .download-btn {
-        width: 90%;
-        padding: 8px 0; /* Ajuste del padding para botones en móviles */
-    }
-
-    .footer-bottom p {
-        font-size: 0.75em;
-    }
-
-    .payment-methods img {
-        max-width: 80px; /* Tamaño más pequeño de las imágenes de pago en móviles */
-    }
+.logo {
+    color: #f0a500;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-right: 50px; /* Añadir un margen derecho al logo */
 }
 
 
-
-@media (max-width: 468px) {
-	html {
-		font-size: 42.5%;
-	}
-
-	.content-banner {
-		max-width: 50rem;
-		padding: 22rem 0;
-	}
-
-	.heading-1 {
-		font-size: 2.8rem;
-	}
-
-	.card-feature {
-		flex-direction: column;
-		border-radius: 2rem;
-	}
-
-	.feature-content {
-		align-items: center;
-	}
-
-	.feature-content p {
-		font-size: 1.4rem;
-		text-align: center;
-	}
-
-	.feature-content span {
-		font-size: 1.6rem;
-		text-align: center;
-	}
-
-	.container-options span {
-		font-size: 1.8rem;
-		padding: 1rem 1.5rem;
-		font-weight: 500;
-	}
-
-	.container-products {
-		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-		gap: 1rem;
-	}
-
-	.container-img .discount {
-		font-size: 2rem;
-	}
-
-	.content-card-product h3 {
-		font-size: 2.2rem;
-	}
-
-	.gallery {
-		grid-template-rows: repeat(2, 20rem);
-	}
-
-	.blogs {
-		padding: 2rem;
-	}
-
-	.container-blogs {
-		grid-template-columns: 1fr;
-		height: 75rem;
-	}
-
-	.content-blog h3 {
-		font-size: 2.4rem;
-	}
-
-	.content-blog span {
-		font-size: 1.8rem;
-	}
-
-	.content-blog p {
-		font-size: 2.2rem;
-	}
-
-
-	/* Estilos generales */
-.container.blogs {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px 0;
+.logo:hover {
+    color: #ffffff; /* Cambio de color al pasar el ratón */
 }
 
-.heading-1 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    color: #333;
+/* Estilos de los enlaces */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-/* Diseño de cuadrícula para los blogs */
-.container-blogs {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+.nav-links li {
+    display: inline;
 }
 
-/* Estilo para cada tarjeta de blog */
-.card-blog {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+}
+
+.nav-links a:hover {
+    color: #f0a500; /* Cambio de color en hover */
+    border-bottom: 2px solid #f0a500; /* Línea inferior al pasar el ratón */
+}
+
+/* Menú hamburguesa (solo visible en móviles) */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    height: 3px;
+    background-color: #f0a500;
+    border-radius: 3px;
     transition: all 0.3s ease;
 }
 
-.card-blog:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.container-img {
+/* Estilos del carrito */
+#cart-container {
     position: relative;
-    overflow: hidden;
 }
 
-.container-img img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+#toggle-cart {
+    width: 30px;
+    cursor: pointer;
+    filter: brightness(0) invert(1); /* Icono blanco */
     transition: transform 0.3s ease;
 }
 
-.container-img:hover img {
-    transform: scale(1.05);
+#toggle-cart:hover {
+    transform: scale(1.1); /* Efecto de agrandamiento al pasar el ratón */
 }
 
-/* Botones sobre la imagen */
-.button-group-blog {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    gap: 10px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.container-img:hover .button-group-blog {
-    opacity: 1;
-}
-
-.button-group-blog span {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 8px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.button-group-blog span:hover {
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-/* Contenido del blog */
-.content-blog {
+/* Estilos del carrito */
+#cart {
+    position: fixed; /* Cambiar de absolute a fixed para que esté siempre visible */
+    right: 0;
+    top: 60px;
+    background-color: #fff;
+    width: 300px;
     padding: 20px;
-    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    max-height: 400px;
+    overflow-y: auto;
 }
 
-.content-blog h3 {
-    font-size: 1.6em;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.content-blog span {
-    display: block;
-    font-size: 0.9em;
-    color: #777;
-    margin-bottom: 10px;
-}
-
-.content-blog p {
-    font-size: 1em;
-    color: #555;
-    line-height: 1.6em;
-}
-
-/* Responsividad mejorada para dispositivos móviles */
-@media (max-width: 1024px) {
-    .container.blogs {
-        width: 95%;
-    }
-
-    .content-blog h3 {
-        font-size: 1.4em;
-    }
-
-    .content-blog p {
-        font-size: 1em;
-    }
-}
-
+/* Estilos responsivos del carrito */
 @media (max-width: 768px) {
-    .container.blogs {
-        width: 95%;
-    }
-
-    .content-blog h3 {
-        font-size: 1.3em;
-    }
-
-    .content-blog p {
-        font-size: 0.95em;
-    }
-}
-
-@media (max-width: 480px) {
-    .container-blogs {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .container-img img {
-        height: 180px;
-    }
-
-    .content-blog h3 {
-        font-size: 1.2em;
-    }
-
-    .content-blog p {
-        font-size: 0.9em;
-    }
-
-    .button-group-blog span {
-        padding: 6px;
-    }
-
-    .content-blog {
+    #cart {
+        width: 100%; /* Ocupar todo el ancho en móviles */
+        left: 0; /* Asegurar que se alinee a la izquierda en móviles */
+        right: 0; /* Asegurar que se alinee a la derecha también */
+        top: 60px;
         padding: 15px;
+        max-height: 60vh; /* Limitar la altura para no ocupar toda la pantalla */
+        overflow-y: auto;
+        border-radius: 0; /* Eliminar el borde redondeado para adaptarse mejor a móviles */
     }
 }
 
-@media (max-width: 360px) {
-    .container-img img {
-        height: 160px;
-    }
 
-    .content-blog h3 {
-        font-size: 1.1em;
-    }
-
-    .content-blog p {
-        font-size: 0.85em;
-    }
+.carrito-h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-	.btn-read-more{
-		font-size: 1.8rem;
-	}
-
-	.contact-info ul,
-	.information ul,
-	.my-account ul{
-		display: none;
-	}
-
-	.contact-info {
-		align-items: center;
-	}
-
-	.menu-footer{
-		grid-template-columns: 1fr;
-	}
-
-	.content p{
-		font-size: 1.6rem;
-	}
+.cart-items {
+    max-height: 150px;
+    overflow-y: auto;
+    margin-bottom: 10px;
 }
 
-
-@media (max-width: 468px) {
-	html {
-		font-size: 42.5%;
-	}
-
-	.content-banner {
-		max-width: 50rem;
-		padding: 22rem 0;
-	}
-
-	.heading-1 {
-		font-size: 2.8rem;
-	}
-
-	.card-feature {
-		flex-direction: column;
-		border-radius: 2rem;
-	}
-
-	.feature-content {
-		align-items: center;
-	}
-
-	.feature-content p {
-		font-size: 1.4rem;
-		text-align: center;
-	}
-
-	.feature-content span {
-		font-size: 1.6rem;
-		text-align: center;
-	}
-
-	.container-options span {
-		font-size: 1.8rem;
-		padding: 1rem 1.5rem;
-		font-weight: 500;
-	}
-
-	.container-products {
-		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-		gap: 1rem;
-	}
-
-	.container-img .discount {
-		font-size: 2rem;
-	}
-
-	.content-card-product h3 {
-		font-size: 2.2rem;
-	}
-
-	.gallery {
-		grid-template-rows: repeat(2, 20rem);
-	}
-
-	.blogs {
-		padding: 2rem;
-	}
-
-	.container-blogs {
-		grid-template-columns: 1fr;
-		height: 75rem;
-	}
-
-	.content-blog h3 {
-		font-size: 2.4rem;
-	}
-
-	.content-blog span {
-		font-size: 1.8rem;
-	}
-
-	.content-blog p {
-		font-size: 2.2rem;
-	}
-
-	.btn-read-more{
-		font-size: 1.8rem;
-	}
-
-	.contact-info ul,
-	.information ul,
-	.my-account ul{
-		display: none;
-	}
-
-	.contact-info {
-		align-items: center;
-	}
-
-	.menu-footer{
-		grid-template-columns: 1fr;
-	}
-
-	.content p{
-		font-size: 1.6rem;
-	}
+.total {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-/* Botón de descarga */
-.download-btn {
-    display: inline-block;
-    background-color: #000;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
+.button {
+    display: block;
+    text-align: center;
+    background-color: #f0a500;
+    color: white;
+    padding: 10px;
     text-decoration: none;
-    font-size: small;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
+    border-radius: 5px;
 }
 
-.download-btn:hover {
-    background-color: #333;
+.button:hover {
+    background-color: #333; /* Cambio de color en hover */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #222;
+        width: 100%;
+        height: auto;
+        display: none;
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid #f0a500;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    #cart {
+        width: 100%;
+        right: 0;
+    }
 }
