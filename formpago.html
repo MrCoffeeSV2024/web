@@ -5,176 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pago</title>
-    <link rel="shortcut icon" href="img/Logo de la cafeteria.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="pago.css">
     <script src="frmpago.js" charset="utf-8"></script>
     <script src="carrito.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-image: url('ruta/a/tu/imagen.jpg'); /* Cambiar a la ruta de la imagen de fondo */
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal {
-            background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 450px; /* Ampliar el máximo ancho para más espacio */
-            padding: 20px;
-            overflow: hidden;
-        }
-
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-
-        .form-list {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .form-list__row {
-            margin-bottom: 20px; /* Aumentar el espacio entre los elementos */
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold; /* Hacer la etiqueta más destacada */
-        }
-
-        input[type="text"],
-        input[type="date"],
-        input[type="button"],
-        input[type="radio"] {
-            width: 100%;
-            padding: 12px; /* Mayor padding para mayor comodidad */
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-            font-size: 16px; /* Tamaño de fuente más grande */
-        }
-
-        input[type="radio"] {
-            width: auto; /* Ajustar ancho de los radios */
-        }
-
-        .payment-methods {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-        }
-
-        .method {
-            margin-right: 10px;
-        }
-
-        .form-list__row--agree {
-            display: flex;
-            align-items: center;
-        }
-
-        .custom-alert {
-            display: none;
-            background-color: #4CAF50; /* Verde */
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 5px;
-        }
-
-        @media (max-width: 480px) {
-            .modal {
-                padding: 15px; /* Ajustar el padding en pantallas pequeñas */
-            }
-
-            h2 {
-                font-size: 1.5rem; /* Ajustar tamaño de texto en pantallas pequeñas */
-            }
-
-            input[type="button"] {
-                font-size: 16px; /* Aumentar tamaño de botón en pantallas pequeñas */
-            }
-
-            .payment-methods {
-                flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
-                align-items: flex-start; /* Alinear a la izquierda */
-            }
-
-            .method {
-                margin-bottom: 10px; /* Espacio entre botones de pago */
-            }
-        }
-    </style>
 </head>
 
 <body>
     <div class="modal">
         <div class="modal__container">
-            <div class="modal__content">
-                <h2>Completar Pago</h2>
-                <form>
-                    <ul class="form-list">
-                        <li class="form-list__row">
-                            <label for="name">Nombre</label>
-                            <input type="text" id="name" required />
-                        </li>
-                        <li class="form-list__row">
-                            <label>Forma de Pago</label>
-                            <div class="payment-methods">
-                                <input type="radio" id="credit_card" name="payment_method" value="credit_card" onchange="toggleCardInput();" checked>
-                                <label for="credit_card" class="method credit_card">Tarjeta de Crédito</label>
-                                <input type="radio" id="cash" name="payment_method" value="cash" onchange="toggleCardInput();">
-                                <label for="cash" class="method cash">Efectivo</label>
-                            </div>
-                        </li>
-                        <li class="form-list__row" id="cardNumberInput">
-                            <label for="cc_number">Número de Tarjeta</label>
-                            <input type="text" id="cc_number" name="cc_number" required />
-                        </li>
-                        <li class="form-list__row">
-                            <label for="delivery_date">Fecha de entrega</label>
-                            <input type="date" id="delivery_date" required />
-                        </li>
-                        <li class="form-list__row">
-                            <label for="address">Dirección</label>
-                            <input type="text" id="address" required />
-                        </li>
-                        <li class="form-list__row form-list__row--agree">
-                            <input type="checkbox" id="save_cc" name="save_cc" checked />
-                            <label for="save_cc">Guardar tarjeta para futuras compras</label>
-                        </li>
-                        <li>
-                            <input type="button" id="pagar" onclick="showNotification();" value="Pagar">
-                        </li>
-                        <div id="custom-alert" class="custom-alert" role="alert">
-                            Su compra ha sido completada exitosamente
+            <h2>Completar Pago</h2>
+            <form>
+                <ul class="form-list">
+                    <li class="form-list__row">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" required />
+                    </li>
+                    <li class="form-list__row">
+                        <label>Forma de Pago</label>
+                        <div class="payment-methods">
+                            <input type="radio" id="credit_card" name="payment_method" value="credit_card" onchange="toggleCardInput();" checked>
+                            <label for="credit_card" class="method credit_card">
+                                <i class="fas fa-credit-card"></i> Tarjeta de Crédito
+                            </label>
+                            <input type="radio" id="cash" name="payment_method" value="cash" onchange="toggleCardInput();">
+                            <label for="cash" class="method cash">
+                                <i class="fas fa-money-bill-wave"></i> Efectivo
+                            </label>
                         </div>
-                    </ul>
-                </form>
-            </div>
+                    </li>
+                    <li class="form-list__row" id="cardNumberInput">
+                        <label for="cc_number">Número de Tarjeta</label>
+                        <input type="text" id="cc_number" name="cc_number" required />
+                    </li>
+                    <li class="form-list__row">
+                        <label for="delivery_date">Fecha de entrega</label>
+                        <input type="date" id="delivery_date" required />
+                    </li>
+                    <li class="form-list__row">
+                        <label for="address">Dirección</label>
+                        <input type="text" id="address" required />
+                    </li>
+                    <li class="form-list__row form-list__row--agree">
+                        <input type="checkbox" id="save_cc" name="save_cc" checked />
+                        <label for="save_cc">Guardar tarjeta para futuras compras</label>
+                    </li>
+                    <li>
+                        <input type="button" id="pagar" onclick="showNotification();" value="Pagar">
+                    </li>
+                    <div id="custom-alert" class="custom-alert" role="alert">
+                        Su compra ha sido completada exitosamente
+                    </div>
+                </ul>
+            </form>
         </div>
     </div>
 
     <script>
         function toggleCardInput() {
             var cardInput = document.getElementById("cardNumberInput");
-            if (document.getElementById("credit_card").checked) {
-                cardInput.style.display = 'block';
-            } else {
-                cardInput.style.display = 'none';
-            }
+            cardInput.style.display = document.getElementById("credit_card").checked ? 'block' : 'none';
         }
         toggleCardInput();  // Call on initial load
 
