@@ -18,6 +18,13 @@ html {
 }
 
 
+.heading-1 {
+    font-size: 35px; /* Ajusta el tamaño del texto */
+    text-align: center; /* Centra el texto horizontalmente */
+    font-weight: bold; /* Aumenta el grosor del texto (opcional) */
+    margin: 20px 0; /* Añade espacio superior e inferior */
+    color: #000000; /* Ajusta el color según tu preferencia */
+}
  
 
 #cart-container {
