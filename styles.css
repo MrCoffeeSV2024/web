@@ -7,7 +7,7 @@
 }
 
 html {
-	font-size: 62.5%;
+	font-size: 65.5%;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -17,7 +17,6 @@ html {
 	box-sizing: border-box;
 }
 
-
 .heading-1 {
     font-size: 35px; /* Ajusta el tamaño del texto */
     text-align: center; /* Centra el texto horizontalmente */
@@ -25,6 +24,7 @@ html {
     margin: 20px 0; /* Añade espacio superior e inferior */
     color: #000000; /* Ajusta el color según tu preferencia */
 }
+
  
 
 #cart-container {
@@ -353,12 +353,15 @@ box-shadow: none;
 }
 
 
-.container-features {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 3rem;
-	padding: 3rem 0;
+.container.container-features {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center;     /* Centra verticalmente (si es necesario) */
+    gap: 40px;               /* Espacio entre los elementos (ajusta según tu necesidad) */
+    padding: 20px;           /* Espacio interno del contenedor */
+    flex-wrap: wrap;         /* Permite que los elementos se ajusten en múltiples líneas si el espacio es insuficiente */
 }
+
 
 .card-feature {
 	display: flex;
@@ -792,13 +795,13 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #222; /* Color oscuro para la barra */
+    background-color: #c7a17a; /* Color oscuro para la barra */
     padding: 15px 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
 }
 
 .logo {
-    color: #f0a500;
+    color: white;
     font-size: 26px;
     font-weight: bold;
     text-decoration: none;
@@ -831,8 +834,8 @@ header nav {
 }
 
 .nav-links a:hover {
-    color: #f0a500; /* Cambio de color en hover */
-    border-bottom: 2px solid #f0a500; /* Línea inferior al pasar el ratón */
+    color: black; /* Cambio de color en hover */
+    border-bottom: 2px solid black; /* Línea inferior al pasar el ratón */
 }
 
 /* Menú hamburguesa (solo visible en móviles) */
@@ -847,7 +850,7 @@ header nav {
 
 .menu-icon .bar {
     height: 3px;
-    background-color: #f0a500;
+    background-color: white;
     border-radius: 3px;
     transition: all 0.3s ease;
 }
@@ -918,7 +921,7 @@ header nav {
 .button {
     display: block;
     text-align: center;
-    background-color: #f0a500;
+    background-color: #c7a17a;
     color: white;
     padding: 10px;
     text-decoration: none;
@@ -926,7 +929,7 @@ header nav {
 }
 
 .button:hover {
-    background-color: #333; /* Cambio de color en hover */
+    background-color: #b08d6a; /* Cambio de color en hover */
 }
 
 /* Estilos responsivos */
