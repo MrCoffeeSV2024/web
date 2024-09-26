@@ -6,14 +6,15 @@ body {
   background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
   background-position: center; /* Centra la imagen de fondo */
   background-repeat: no-repeat; /* No repetir la imagen de fondo */
+  min-height: 100vh; /* Asegura que el fondo cubra toda la ventana */
 }
 
 .modal {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 20px;
+  align-items: flex-start; /* Cambiar el centrado vertical */
+  height: 100vh; /* Asegura que el contenedor modal use todo el alto de la ventana */
+  padding: 40px 20px; /* Aumentar padding superior para más espacio */
   box-sizing: border-box;
 }
 
@@ -24,6 +25,7 @@ body {
   width: 100%;
   max-width: 450px; /* Ampliar el máximo ancho para más espacio */
   padding: 20px;
+  margin-top: 30px; /* Añadir un margen superior al contenedor */
   overflow: hidden;
 }
 
@@ -33,6 +35,7 @@ h2 {
   margin-bottom: 20px;
   font-size: 1.8rem;
   color: black; /* Color del título */
+  margin-top: 10px; /* Añadir margen superior para separarlo del borde */
 }
 
 .form-list {
@@ -91,7 +94,7 @@ input[type="radio"] {
 }
 
 input[type="button"] {
-  background-color: #c7a17a; /* Azul vibrante */
+  background-color: #c7a17a; /* Color personalizado */
   color: white;
   border: none;
   cursor: pointer;
@@ -102,7 +105,7 @@ input[type="button"] {
 }
 
 input[type="button"]:hover {
-  background-color: #d8ba9b; /* Azul oscuro al pasar el ratón */
+  background-color: #d8ba9b; /* Cambiar color al hacer hover */
   transform: translateY(-2px); /* Levantar el botón al hacer hover */
 }
 
@@ -116,25 +119,29 @@ input[type="button"]:hover {
   border-radius: 5px;
 }
 
-@media (max-width: 480px) {
+/* Para pantallas más pequeñas */
+@media (max-width: 768px) {
+  body {
+    background-position: top; /* Asegura que la imagen esté visible y no cortada */
+  }
   .modal__container {
-      padding: 15px; /* Ajustar el padding en pantallas pequeñas */
+    padding: 15px; /* Ajustar el padding en pantallas pequeñas */
   }
 
   h2 {
-      font-size: 1.5rem; /* Ajustar tamaño de texto en pantallas pequeñas */
+    font-size: 1.5rem; /* Ajustar tamaño de texto en pantallas pequeñas */
   }
 
   input[type="button"] {
-      font-size: 16px; /* Aumentar tamaño de botón en pantallas pequeñas */
+    font-size: 16px; /* Aumentar tamaño de botón en pantallas pequeñas */
   }
 
   .payment-methods {
-      flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
-      align-items: flex-start; /* Alinear a la izquierda */
+    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    align-items: flex-start; /* Alinear a la izquierda */
   }
 
   .method {
-      margin-bottom: 10px; /* Espacio entre botones de pago */
+    margin-bottom: 10px; /* Espacio entre botones de pago */
   }
 }
