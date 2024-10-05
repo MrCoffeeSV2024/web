@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripcion</title>
+    <link class="f" rel="shortcut icon" href="Img/Logotipo_marca_de_productos_sustentables_ilustrado_verde-removebg-preview.png" />
+    <link rel="stylesheet" href="instripcion.css">
+</head>
+
+<body>
+    <header>
+        <a href="home.html" class="home-link">
+            <img src="Img/home.png" alt="Inicio" class="icono-casa">
+        </a>
+        <div class="header-container">
+            <img src="Img/Logotipo_marca_de_productos_sustentables_ilustrado_verde-removebg-preview.png"
+                alt="Logo Eco Aprendizaje" class="logo">
+            <h1>Eco Aprendizaje</h1>
+        </div>
+    </header>
+    <!-- Sección de Formulario de Inscripción -->
+    <section id="inscripcion" class="section inscripcion">
+        <div class="contenedor-inscripcion">
+            <h2>Inscripción a la Charla/Taller</h2>
+            <p>Por favor, completa el siguiente formulario para inscribirte a la charla o taller de tu interés.</p>
+
+            <form action="#" method="POST" class="form-inscripcion">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono (opcional):</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+                <form id="formulario">
+                    <div class="form-group">
+                        <label for="taller">Selecciona el Taller/Charla:</label>
+                        <select id="taller" name="taller" onchange="mostrarDescripcion()">
+                            <option value="">-- Elige una opción --</option>
+                            <option value="energia-renovables">Seminario: Energías Renovables y el Futuro</option>
+                            <option value="cambio-climatico">Taller: Cambio Climático y Sostenibilidad</option>
+                            <option value="reciclaje">Charla: Reciclaje y Gestión de Residuos</option>
+                            <option value="biodiversidad">Taller: Importancia de la Biodiversidad</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="descripcion" style="display: none;">
+                        <label>Descripción:</label>
+                        <p id="descripcion-texto"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Comentarios (opcional):</label>
+                        <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn" onclick="enviarFormulario(event)">Enviar</button>
+
+                </form>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+
+</html>

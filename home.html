@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Aprendizaje</title>
+    <link class="f" rel="shortcut icon" href="Img/Logotipo_marca_de_productos_sustentables_ilustrado_verde-removebg-preview.png" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <img src="Img/Logotipo_marca_de_productos_sustentables_ilustrado_verde-removebg-preview.png" alt="Logo Eco Aprendizaje" class="logo">
+            <h1>Eco Aprendizaje</h1>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <a onclick="mostrarOcultar('mostrar')" class="menu-icon"><i class="fas fa-bars"></i></a>
+        <ul id="mostrar" class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#articulos">Artículos</a></li>
+            <li><a href="#infografias">Infografia</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+            <li><a href="#foro">Foro</a></li>
+            <li><a href="#calendario">Calendario</a></li>
+            <li><a href="instripcion.html">Inscribirme</a></li>
+        </ul>
+    </nav>
+
+    <section class="banner">
+        <div class="banner-content">
+            <h2 class="banner-h2">Plataforma de Educación Ambiental</h2>
+            <p class="banner-p">"Aprende, comparte y actúa por el medio ambiente."</p>
+            <a href="#articulos" class="button">Explorar</a>
+        </div>
+    </section>
+
+<!-- Sección de artículos -->
+<section id="articulos" class="section">
+    <h2 class="art">Artículos Recientes</h2>
+    <div class="articles-container">
+        <article>
+            <img src="Img/recycling-bin.png" alt="Reciclaje">
+            <h3>Cómo reciclar correctamente</h3>
+            <p>Descubre los pasos básicos para un reciclaje efectivo en casa.</p>
+            <a href="https://reciclamas.eu/blog/que-es-el-reciclaje-y-como-reciclar-correctamente/">Leer más <i class="fas fa-arrow-right"></i></a>
+        </article>
+        <article>
+            <img src="img/solar-panel.png" alt="Energía Solar">
+            <h3>Beneficios de la Energía Solar</h3>
+            <p>Aprende cómo la energía solar está ayudando a reducir la huella de carbono.</p>
+            <a href="https://www.repsol.com/es/energia-futuro/futuro-planeta/energia-solar/index.cshtml">Leer más <i class="fas fa-arrow-right"></i></a>
+        </article>
+        <article>
+            <img src="img/water-tap.png" alt="Ahorro de Agua">
+            <h3>Ahorro de Agua en el Hogar</h3>
+            <p>Consejos prácticos para reducir el consumo de agua en tu hogar.</p>
+            <a href="https://olins.com.sv/blog/successful-people/tips-para-ahorrar-el-agua-en-el-hogar">Leer más <i class="fas fa-arrow-right"></i></a>
+        </article>
+    </div>
+</section>
+
+    <!-- Sección de infografías y videos -->
+    <section id="infografias" class="section infografias">
+        <h2 class="art">Infografías y Videos Educativos</h2>
+        <div class="media-container">
+            <div class="media">
+                <img src="img/infografia.jpg" alt="Infografía sobre reciclaje" class="thumbnail" onclick="openModal(this, false)">
+                <p class="xd">¿Cómo reciclar en casa?</p>
+            </div>
+            <div class="media">
+                <video class="thumbnail" onclick="openModal(this, true)" controls>
+                    <source src="Img/ENERGÍA SOLAR ☀️ Ventajas y Desventajas - EcologíaVerde (1080p, h264, youtube).mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+                <p class="xd">Energía Solar y su Impacto</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para imagen y video -->
+    <div id="mediaModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage" style="display: none;">
+        <video id="modalVideo" class="modal-content" style="display: none;" controls>
+            <source id="modalVideoSource" type="video/mp4">
+            Tu navegador no soporta la reproducción de videos.
+        </video>
+        <div id="caption"></div>
+    </div>
+
+<!-- Sección de recursos -->
+<section id="recursos" class="section">
+    <h2 class="art">Recursos y Guías Descargables</h2>
+    <div class="resources-container">
+        <a href="Img/Guia de Reciclaje.pdf" class="resource" download>
+            <i class="fas fa-file-pdf"></i>
+            Guía Completa de Reciclaje
+        </a>
+        
+        <a href="Img/Introduccion a las energia renovables.pdf" class="resource" download>
+            <i class="fas fa-file-pdf"></i>
+            Introducción a la Energía Renovable
+        </a>
+    </div>
+</section>
+
+<!-- Sección del foro -->
+<section id="foro" class="section foro">
+    <div class="contenedor-foro">
+        <h2 class="art">Foro Comunitario</h2>
+        <p class="a">Comparte tus ideas y proyectos con otros defensores del medio ambiente.</p>
+        <a href="foro.html" class="btn">Unirse al Foro</a>
+    </div>
+</section>
+
+<!-- Sección de Calendario de Eventos -->
+<section id="calendario" class="section calendario">
+    <div class="contenedor-calendario">
+        <h2 >Calendario de Eventos y Charlas Online</h2>
+        <p>Únete a nuestras charlas y eventos sobre ecología y sostenibilidad. ¡Conoce a los expertos y aprende más!</p>
+
+        <div class="eventos-container">
+            <div class="evento">
+                <h3>Charla: La Importancia de la Biodiversidad</h3>
+                <p><strong>Fecha:</strong> 10 de Octubre de 2024</p>
+                <p><strong>Hora:</strong> 5:00 PM - 6:00 PM (UTC)</p>
+                <p><strong>Descripción:</strong> Un experto en biodiversidad discutirá la importancia de preservar la diversidad biológica en nuestro planeta.</p>
+                <a href="instripcion.html" class="btn">Inscribirse</a>
+            </div>
+
+            <div class="evento">
+                <h3>Taller: Prácticas de Jardinería Sostenible</h3>
+                <p><strong>Fecha:</strong> 15 de Octubre de 2024</p>
+                <p><strong>Hora:</strong> 3:00 PM - 4:30 PM (UTC)</p>
+                <p><strong>Descripción:</strong> Aprende técnicas de jardinería sostenible que puedes aplicar en tu hogar.</p>
+                <a href="instripcion.html" class="btn">Inscribirse</a>
+            </div>
+
+            <div class="evento">
+                <h3>Seminario: Energías Renovables y el Futuro</h3>
+                <p><strong>Fecha:</strong> 20 de Octubre de 2024</p>
+                <p><strong>Hora:</strong> 2:00 PM - 3:30 PM (UTC)</p>
+                <p><strong>Descripción:</strong> Una discusión sobre las tecnologías de energía renovable y su impacto en la sostenibilidad.</p>
+                <a href="instripcion.html" class="btn">Inscribirse</a>
+            </div>
+
+            <div class="evento">
+                <h3>Conferencia: El Cambio Climático y Tú</h3>
+                <p><strong>Fecha:</strong> 25 de Octubre de 2024</p>
+                <p><strong>Hora:</strong> 6:00 PM - 7:30 PM (UTC)</p>
+                <p><strong>Descripción:</strong> Descubre cómo el cambio climático afecta a nuestra vida cotidiana y qué podemos hacer al respecto.</p>
+                <a href="instripcion.html" class="btn">Inscribirse</a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+       
+        <p class="footer-mission"><strong>Misión:</strong> Promover la educación y la conciencia ambiental para un futuro sostenible.</p>
+        <p class="footer-vision"><strong>Visión:</strong> Ser un referente en la educación ambiental, inspirando a las futuras generaciones a cuidar nuestro planeta.</p>
+        <p class="footer-copy">&copy; 1°D 2024. Todos los derechos reservados.</p>
+        <div class="social-media">
+            <a href="#" target="_blank">
+                <img src="Img/facebook.png" alt="Facebook" class="social-icon">
+            </a>
+            <a href="#" target="_blank">
+                <img src="Img/youtube.png" alt="Twitter" class="social-icon">
+            </a>
+            <a href="#" target="_blank">
+                <img src="Img/instagram.png" alt="Instagram" class="social-icon">
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- Botón de Ir Arriba -->
+<button id="scrollToTopBtn" class="scrollToTopBtn" onclick="scrollToTop()">
+    <img src="Img/home.png" alt="Ir Arriba" class="scroll-icon">
+</button>
+
+</body>
+
+<script src="main.js"></script>
+</html>

@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: #2e736e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Para que el icono se alinee en la esquina izquierda */
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    width: 60px;
+    margin-right: 15px;
+}
+header .home-link {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+header .icono-casa {
+    width: 30px;
+    height: 30px;
+}
+
+header h1 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+
+
+/* Estilos generales para la sección de inscripción */
+.section.inscripcion {
+    background-image: url('Img/banner.jpg'); /* Asegúrate de poner la ruta correcta de la imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    padding: 60px 20px;
+    text-align: center;
+    position: relative; /* Posicionamiento relativo para el contenido */
+    color: white; /* Cambia el color del texto a blanco para mayor contraste */
+}
+
+.contenedor-inscripcion {
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra más intensa para destacar */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    padding: 30px; /* Padding alrededor del contenido */
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    gap: 15px; /* Espacio entre elementos */
+}
+
+/* Títulos y textos */
+h2, p, label {
+    color: #333; /* Color oscuro para el texto */
+}
+
+h2 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+/* Estilos para el formulario */
+.form-inscripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre elementos */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease; /* Transición en el borde */
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #4CAF50; /* Cambio de color en el enfoque */
+    outline: none; /* Elimina el borde azul por defecto */
+}
+
+select {
+    appearance: none; /* Elimina el estilo por defecto */
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABWklEQVR42mL8///8/7ywPQDBDE8EgsBQAByzKZAe2F8AAAAAElFTkSuQmCC') no-repeat right;
+    background-size: 12px;
+    padding-right: 30px; /* Espacio para el icono */
+}
+
+button.btn {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efecto de transformación */
+}
+
+button.btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Efecto de aumento en el hover */
+}
+
+/* Estilos para el campo de descripción */
+#descripcion {
+    display: none; /* Ocultar inicialmente */
+}
+
+#descripcion-texto {
+    padding: 10px;
+    border: 1px solid #ccc; /* Añadir un borde ligero */
+    border-radius: 5px; /* Esquinas redondeadas */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    color: #333; /* Color del texto */
+}
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contenedor-inscripcion {
+        padding: 20px; /* Reduce el padding en pantallas pequeñas */
+        max-width: 90%; /* Aumenta el ancho máximo en pantallas pequeñas */
+    }
+
+    h2 {
+        font-size: 1.8em; /* Tamaño de fuente más pequeño para títulos */
+    }
+
+    p {
+        font-size: 1em; /* Tamaño de fuente más pequeño para párrafos */
+    }
+
+    input, textarea, select {
+        font-size: 0.9em; /* Tamaño de fuente más pequeño para campos de formulario */
+    }
+}
+
+

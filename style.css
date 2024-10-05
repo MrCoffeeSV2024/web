@@ -1,0 +1,610 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+.main-header {
+    background-color: #2e736e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #1f514d;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 60px;
+    margin-right: 15px;
+}
+
+/* Navigation */
+.main-nav {
+    background-color: #17403b;
+    padding: 15px;
+    text-align: center;
+}
+
+.menu-icon {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00d1b2;
+}
+
+/* Hidden Menu for Mobile */
+.nav-links.hidden {
+    display: none;
+}
+
+/* Hero Section */
+.banner {
+    background: url('Img/banner.jpg') no-repeat center center/cover;
+    color: white;
+    height: 76vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.banner-h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white; /* Ensure the header text is white */
+}
+
+.banner-p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: white; /* Ensure the paragraph text is white */
+}
+
+
+.button {
+    background-color: #028a73;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #00d1b2;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px;
+        background-color: #17403b;
+        text-align: center;
+    }
+
+    .nav-links a:hover {
+        background-color: #0b2c2a;
+    }
+}
+
+/* Section */
+.section {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+}
+
+.art {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Articles Container */
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+/* Article */
+article {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+article img {
+    width: 50%;
+    max-width: 150px;
+    margin-bottom: 1rem;
+    border-radius: 8px 8px 0 0;
+}
+
+article h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #2c7d2e;
+}
+
+.xd {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
+    color: #2c7d2e;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+article a {
+    color: #2c7d2e;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+}
+
+article a i {
+    margin-left: 0.5rem;
+    transition: transform 0.3s;
+}
+
+article a:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .articles-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Media Section */
+.media-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+/* Media */
+.media {
+    flex: 1;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Estilo de la imagen */
+.media img {
+    width: 60%; /* Define el tamaño pequeño por defecto */
+    max-width: 200px; /* Limita el tamaño máximo de la imagen */
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Transición para el efecto de zoom */
+}
+
+/* Efecto de hover */
+.media img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al pasar el puntero */
+}
+
+/* Modal Styles */
+/* Agrega aquí tu CSS */
+.media-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.media {
+    flex: 1;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.media img, .media video {
+    max-width: 100%;
+    border-radius: 8px;
+    cursor: pointer; /* Cambia el puntero al pasar sobre la imagen y el video */
+}
+
+.modal {
+    display: none; /* Ocultar modal por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con transparencia */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Ajusta el tamaño del modal según necesites */
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#caption {
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.resources-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .resource {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #2c7d2e;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .resource i {
+    margin-right: 1rem;
+    font-size: 2rem; 
+    
+  }
+
+  /* Estilos generales para la sección del foro */
+.section.foro {
+    background-color: #f7f9fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contenedor-foro {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.a{
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+a.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1.1em;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+a.btn:hover {
+    background-color: #45a049;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .contenedor-foro {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    a.btn {
+        padding: 10px 25px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-foro {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    a.btn {
+        padding: 8px 20px;
+        font-size: 0.9em;
+    }
+}
+
+/* Estilos generales para la sección de calendario */
+.section.calendario {
+    background-color: #f7f9fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contenedor-calendario {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de eventos en columnas */
+.eventos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacio entre columnas */
+}
+
+.evento {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 0 0 calc(50% - 20px); /* Dos columnas con espacio */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; /* Efecto de hover */
+}
+
+.evento:hover {
+    transform: scale(1.02); /* Efecto de hover */
+}
+
+.evento h3 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.evento p {
+    margin: 5px 0;
+}
+
+a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+a.btn:hover {
+    background-color: #45a049;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .evento {
+        flex: 0 0 calc(100% - 20px); /* Una columna en pantallas pequeñas */
+    }
+}
+
+
+.footer {
+    background-color: #2e736e; /* Fondo verde oscuro */
+    color: #ffffff; /* Color blanco para el texto */
+    text-align: center; /* Centrar texto */
+    padding: 30px; /* Espaciado interno */
+    position: relative; /* Mantener en el flujo del documento */
+    bottom: 0; /* Ubicación al final de la página */
+    width: 100%; /* Ancho completo */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.footer-content {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: auto; /* Centrar contenido */
+}
+
+.footer-content p {
+    margin: 10px 0; /* Espaciado entre párrafos */
+    font-family: 'Arial', sans-serif; /* Tipografía más moderna */
+    color: white;
+}
+
+.footer-copy {
+    font-size: 14px; /* Tamaño del texto de derechos de autor */
+}
+
+.footer-mission, .footer-vision {
+    font-size: 16px; /* Tamaño del texto para misión y visión */
+}
+
+.social-media {
+    margin-top: 15px; /* Espacio entre texto e iconos */
+    display: flex; /* Usar flexbox para los iconos */
+    justify-content: center; /* Centrar iconos */
+    flex-wrap: wrap; /* Ajustar iconos en pantallas pequeñas */
+}
+
+.social-icon {
+    width: 40px; /* Tamaño de los iconos */
+    height: 40px; /* Tamaño de los iconos */
+    margin: 0 15px; /* Espaciado entre iconos */
+    transition: transform 0.3s; /* Transición suave */
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Efecto de escalado al pasar el ratón */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 600px) {
+    .footer {
+        padding: 20px; /* Menor espaciado en pantallas pequeñas */
+    }
+
+    .social-icon {
+        width: 35px; /* Tamaño de los iconos en pantallas pequeñas */
+        height: 35px; /* Tamaño de los iconos en pantallas pequeñas */
+    }
+}
+
+
+.scrollToTopBtn {
+    position: fixed; /* Posición fija */
+    bottom: 20px; /* Distancia desde el fondo */
+    right: 20px; /* Distancia desde la derecha */
+    background-color: #17403b; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Bordes redondeados (circular) */
+    width: 40px; /* Ancho del botón */
+    height: 40px; /* Alto del botón */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    transition: background-color 0.3s; /* Transición suave */
+    display: none; /* Ocultar el botón por defecto */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Ajustar la imagen del icono */
+.scroll-icon {
+    width: 60%; /* Ancho de la imagen dentro del botón */
+    height: auto; /* Mantener la relación de aspecto */
+    margin-top: 5px; /* Margen superior para centrar verticalmente */
+}
+
+/* Cambiar el color del botón al pasar el ratón */
+.scrollToTopBtn:hover {
+    background-color: #1f514d; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 600px) {
+    .scrollToTopBtn {
+        width: 35px; /* Ancho del botón en pantallas pequeñas */
+        height: 35px; /* Alto del botón en pantallas pequeñas */
+    }
+
+    .scroll-icon {
+        width: 50%; /* Ancho de la imagen en pantallas pequeñas */
+    }
+}
